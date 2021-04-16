@@ -1,0 +1,53 @@
+% This file was created by tikzplotlib v0.9.3.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.647058823529412,0}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+log basis x={10},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.0196078431373!black},
+xlabel={Number of Processors},
+xmajorgrids,
+xmin=0.794328234724281, xmax=125.892541179417,
+xminorgrids,
+xmode=log,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={Time (sec)},
+ymajorgrids,
+ymin=0.0874620350797613, ymax=19.4835836183402,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+ytick={0.001,0.01,0.1,1,10,100,1000},
+yticklabels={\(\displaystyle {10^{-3}}\),\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\)}
+]
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+1 3.742557806
+4 1.358692766
+16 0.4738858893
+25 0.2759636748
+64 0.1608038248
+100 0.1118252813
+};
+\addlegendentry{Forward}
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+1 15.2387175252
+4 5.0929829477
+16 1.7030656633
+25 1.0699440635
+64 0.5695991209
+100 0.460855982
+};
+\addlegendentry{Backward}
+\end{axis}
+
+\end{tikzpicture}

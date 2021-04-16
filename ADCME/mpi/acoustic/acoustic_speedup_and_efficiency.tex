@@ -1,0 +1,105 @@
+% This file was created by tikzplotlib v0.9.3.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{groupplot}[group style={group size=2 by 1}]
+\nextgroupplot[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, at={(0.03,0.97)}, anchor=north west, draw=white!80!black},
+log basis x={10},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+title={Forward},
+x grid style={white!69.0196078431373!black},
+xlabel={Number of Processors},
+xmajorgrids,
+xmin=0.794328234724281, xmax=125.892541179417,
+xminorgrids,
+xmode=log,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={Time (sec)},
+ymajorgrids,
+ymin=0.265845012937478, ymax=42.1335951254345,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+ytick={0.01,0.1,1,10,100,1000},
+yticklabels={\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\)}
+]
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+1 1
+4 2.75452839645133
+16 7.89759283934011
+25 13.561776957465
+64 23.2740596229898
+100 33.467904238574
+};
+\addlegendentry{Speedup}
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+1 1
+4 0.688632099112832
+16 0.493599552458757
+25 0.542471078298599
+64 0.363657181609215
+100 0.33467904238574
+};
+\addlegendentry{Efficiency}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, at={(0.03,0.97)}, anchor=north west, draw=white!80!black},
+log basis x={10},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+title={Backward},
+x grid style={white!69.0196078431373!black},
+xlabel={Number of Processors},
+xmajorgrids,
+xmin=0.794328234724281, xmax=125.892541179417,
+xminorgrids,
+xmode=log,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={Time (sec)},
+ymajorgrids,
+ymin=0.262653498360234, ymax=41.6277741527231,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+ytick={0.01,0.1,1,10,100,1000},
+yticklabels={\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\)}
+]
+
+{
+\hspace*{1cm}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+1 1
+4 2.99210063761981
+16 8.94781560898375
+25 14.2425366381782
+64 26.7534077319535
+100 33.0661163582336
+};
+\addlegendentry{Speedup}
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+1 1
+4 0.748025159404953
+16 0.559238475561484
+25 0.569701465527128
+64 0.418021995811774
+100 0.330661163582336
+};
+\addlegendentry{Efficiency}
+}
+\end{groupplot}
+
+\end{tikzpicture}
